@@ -291,13 +291,16 @@ class Session:
         :return: Service client instance
 
         """
+        #if endpoint_url is None:
+        endpoint_local = os.environ.get("AWS_ENDPOINT_URL")
+        
         return self._session.create_client(
             service_name,
             region_name=region_name,
             api_version=api_version,
-            use_ssl=use_ssl,
-            verify=verify,
-            endpoint_url=endpoint_url,
+            use_ssl=False,
+            verify=False,
+            endpoint_url=endpoint_local,
             aws_access_key_id=aws_access_key_id,
             aws_secret_access_key=aws_secret_access_key,
             aws_session_token=aws_session_token,
