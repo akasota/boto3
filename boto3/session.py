@@ -296,19 +296,16 @@ class Session:
         region_local = os.environ.get("AWS_LOCATION")
         
         sess = self._session.create_client(
-            #service_name,
-            's3',
-            #region_name=region_name,
-            region_name='us-east-1',
+            service_name,
+            region_name=region_name,
             api_version=api_version,
             use_ssl=False,
             verify=False,
-            #endpoint_url=endpoint_local,
-            endpoint_url='http://172.17.0.1:9000',
+            endpoint_url=endpoint_local,
             aws_access_key_id=aws_access_key_id,
             aws_secret_access_key=aws_secret_access_key,
-            #aws_session_token=aws_session_token,
-            #config=config,
+            aws_session_token=aws_session_token,
+            config=config,
         )
         
         print(sess)
