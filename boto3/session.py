@@ -295,6 +295,9 @@ class Session:
             endpoint_url = os.environ.get("AWS_ENDPOINT_URL")
             # region_local = os.environ.get("AWS_LOCATION")
         
+        if config is None:
+            config = Config(signature_version="s3v4")
+        
         print("BBBBBBBBBBBBBBBBBBBBBBBBBB")
         print(endpoint_url)
         print("AAAAAAAAAAAAAAAAAAAAAAAAAA")
