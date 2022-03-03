@@ -293,6 +293,7 @@ class Session:
         """
         #if endpoint_url is None:
         endpoint_local = os.environ.get("AWS_ENDPOINT_URL")
+        region_local = os.environ.get("AWS_LOCATION")
         
         return self._session.create_client(
             service_name,
