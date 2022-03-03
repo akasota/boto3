@@ -295,8 +295,7 @@ class Session:
         endpoint_local = os.environ.get("AWS_ENDPOINT_URL")
         region_local = os.environ.get("AWS_LOCATION")
         
-        print('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUUUUUUUUUUUUUUUa')
-        return self._session.create_client(
+        sess = self._session.create_client(
             service_name, 
             region_name=region_name,
             api_version=api_version,
@@ -308,6 +307,9 @@ class Session:
             aws_session_token=aws_session_token,
             config=config,
         )
+        
+        print(sess)
+        return(sess)
 
     def resource(
         self,
