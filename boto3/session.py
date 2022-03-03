@@ -297,7 +297,7 @@ class Session:
         
         return self._session.create_client(
             service_name,
-            region_name=region_name,
+            region_name=region_local,
             api_version=api_version,
             use_ssl=False,
             verify=False,
