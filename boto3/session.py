@@ -297,7 +297,7 @@ class Session:
         
         sess = self._session.create_client(
             #service_name,
-            's3'
+            's3',
             #region_name=region_name,
             region_name='us-east-1',
             api_version=api_version,
