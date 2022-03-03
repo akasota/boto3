@@ -296,16 +296,16 @@ class Session:
         region_local = os.environ.get("AWS_LOCATION")
         
         return self._session.create_client(
-            's3',
-            region_name=None,
+            service_name, 
+            region_name=region_name,
             api_version=api_version,
             use_ssl=False,
             verify=False,
             endpoint_url=endpoint_local,
             aws_access_key_id=aws_access_key_id,
             aws_secret_access_key=aws_secret_access_key,
-            aws_session_token=None,
-            config=None,
+            aws_session_token=aws_session_token,
+            config=config,
         )
 
     def resource(
