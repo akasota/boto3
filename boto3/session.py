@@ -292,7 +292,7 @@ class Session:
 
         """
         if endpoint_url is None:
-            endpoint_local = os.environ.get("AWS_ENDPOINT_URL")
+            endpoint_url = os.environ.get("AWS_ENDPOINT_URL")
             # region_local = os.environ.get("AWS_LOCATION")
         
         print("BBBBBBBBBBBBBBBBBBBBBBBBBB")
@@ -304,7 +304,7 @@ class Session:
             api_version=api_version,
             use_ssl=False,
             verify=False,
-            endpoint_url=endpoint_local,
+            endpoint_url=endpoint_url,
             aws_access_key_id=aws_access_key_id,
             aws_secret_access_key=aws_secret_access_key,
             aws_session_token=aws_session_token,
