@@ -291,10 +291,13 @@ class Session:
         :return: Service client instance
 
         """
-        #if endpoint_url is None:
-        endpoint_local = os.environ.get("AWS_ENDPOINT_URL")
-        region_local = os.environ.get("AWS_LOCATION")
+        if endpoint_url is None:
+            endpoint_local = os.environ.get("AWS_ENDPOINT_URL")
+            # region_local = os.environ.get("AWS_LOCATION")
         
+        print("BBBBBBBBBBBBBBBBBBBBBBBBBB")
+        print(endpoint_url)
+        print("AAAAAAAAAAAAAAAAAAAAAAAAAA")
         sess = self._session.create_client(
             service_name,
             region_name=region_name,
