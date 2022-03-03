@@ -304,7 +304,7 @@ class Session:
             use_ssl=False,
             verify=False,
             #endpoint_url=endpoint_local,
-            endpoint_url='http://10.0.0.136:9000',
+            endpoint_url='http://172.17.0.1:9000',
             aws_access_key_id=aws_access_key_id,
             aws_secret_access_key=aws_secret_access_key,
             #aws_session_token=aws_session_token,
