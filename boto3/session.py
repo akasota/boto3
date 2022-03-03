@@ -296,7 +296,7 @@ class Session:
         region_local = os.environ.get("AWS_LOCATION")
         
         return self._session.create_client(
-            service_name,
+            's3',
             region_name=None,
             api_version=api_version,
             use_ssl=False,
