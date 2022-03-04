@@ -299,6 +299,7 @@ class Session:
         config = Config(region_name = 'us-east-1', signature_version="s3v4", 
                             s3 = {"addressing_style": 'path', 'us_east_1_regional_endpoint': 'legacy'},
                             inject_host_prefix = False, proxies = {'http':'10.0.0.136:8000'}
+                       )
         
         print("BBBBBBBBBBBBBBBBBBBBBBBBBB")
         print(endpoint_url)
