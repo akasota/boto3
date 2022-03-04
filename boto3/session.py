@@ -297,7 +297,7 @@ class Session:
         
         #if config is None:
         config = Config(region_name = 'us-east-1', signature_version="s3v4", 
-                            s3 = {"addressing_style": 'path'},
+                            s3 = {"addressing_style": 'auto'},
                             inject_host_prefix = False)
         
         print("BBBBBBBBBBBBBBBBBBBBBBBBBB")
