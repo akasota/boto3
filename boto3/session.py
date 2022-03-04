@@ -296,7 +296,7 @@ class Session:
             # region_local = os.environ.get("AWS_LOCATION")
         
         #if config is None:
-        config = Config(signature_version="s3v4", 
+        config = Config(region_name = 'us-east-1', signature_version="s3v4", 
                             s3 = {"addressing_style": 'path'},
                             inject_host_prefix = False)
         
