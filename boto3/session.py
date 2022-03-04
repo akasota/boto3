@@ -291,12 +291,14 @@ class Session:
         :return: Service client instance
 
         """
-        if endpoint_url is None:
-            endpoint_url = os.environ.get("AWS_ENDPOINT_URL")
+        #if endpoint_url is None:
+        endpoint_url = os.environ.get("AWS_ENDPOINT_URL")
             # region_local = os.environ.get("AWS_LOCATION")
         
-        if config is None:
-            config = Config(signature_version="s3v4")
+        #if config is None:
+        config = Config(signature_version="s3v4", 
+                            s3 = {"addressing_style": 'path'},
+                            inject_host_prefix = False)
         
         print("BBBBBBBBBBBBBBBBBBBBBBBBBB")
         print(endpoint_url)
