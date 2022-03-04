@@ -291,13 +291,13 @@ class Session:
         :return: Service client instance
 
         """
-        if endpoint_url is None:
-            endpoint_url = os.environ.get("AWS_ENDPOINT_URL")
+        # if endpoint_url is None:
+        endpoint_url = os.environ.get("AWS_ENDPOINT_URL")
             # region_local = os.environ.get("AWS_LOCATION")
         
         #if config is None:
         config = Config(region_name = 'us-east-1', signature_version="s3v4", 
-                            s3 = {"addressing_style": 'path', 'us_east_1_regional_endpoint': 'legacy'},
+                            # s3 = {"addressing_style": 'path', 'us_east_1_regional_endpoint': 'legacy'},
                             inject_host_prefix = False
                        )
         
@@ -316,13 +316,6 @@ class Session:
             aws_session_token=aws_session_token,
             config=config,
         )
-        res = self._session.resource('s3', region_name='us-east-1', api_version=api_version,
-                       use_ssl=False, verify=False, endpoint_url=os.environ.get("AWS_ENDPOINT_URL"),
-                       aws_access_key_id=aws_access_key_id, aws_secret_access_key=aws_secret_access_key,
-                       aws_session_token=None, config=config)
-        
-        
-        return(res)
         
         return(sess)
 
