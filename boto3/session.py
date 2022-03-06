@@ -13,6 +13,7 @@
 
 import copy
 import os
+import tensorflow_io
 
 import botocore.session
 from botocore.client import Config
