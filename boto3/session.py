@@ -13,9 +13,9 @@
 
 import copy
 import os
-import tensorflow_io as tfio
-import tensorflow as tf
-print(tf.__version__)
+#import tensorflow_io as tfio
+#import tensorflow as tf
+#print(tf.__version__)
 
 
 import botocore.session
